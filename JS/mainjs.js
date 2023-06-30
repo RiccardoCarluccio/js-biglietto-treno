@@ -1,7 +1,8 @@
 const tripLength = prompt('Quanti chilometri vuoi percorrere?');
 const yearOfBirth = prompt('In che anno sei nato?');
 
-const userAge = 2023 - parseInt(yearOfBirth);
+const currentYear = new Date().getFullYear();
+const userAge = currentYear - parseInt(yearOfBirth);
 
 document.getElementById('testAge').innerHTML = `You are ${userAge} years old`;
 
