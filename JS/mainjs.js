@@ -8,11 +8,12 @@ document.getElementById('testAge').innerHTML = `You are ${userAge} years old`;
 let ticketPrice = 0.21 * parseInt(tripLength);
 
 if (userAge < 18) {
-  ticketPrice *= 0.8;
+  Math.round((ticketPrice *= 0.8) * 100) / 100;
   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${ticketPrice}€`;
 } else if (userAge > 65) {
-  ticketPrice *= 0.6;
+  Math.round((ticketPrice *= 0.6) * 100) / 100;
   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${ticketPrice}€`;
 } else {
+  Math.round(ticketPrice * 100) / 100;
   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${ticketPrice}€`;
 }
