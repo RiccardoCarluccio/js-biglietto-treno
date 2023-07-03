@@ -15,6 +15,6 @@ if (userAge < 18) {
   const finalPrice = Math.round((ticketPrice *= 0.6) * 100) / 100;
   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${finalPrice}€`;
 } else {
-  const finalPrice = Math.round(finalPrice * 100) / 100;
+  const finalPrice = Math.round(ticketPrice * 100) / 100;
   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${ticketPrice}€`;
 }
